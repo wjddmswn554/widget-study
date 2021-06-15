@@ -11,7 +11,7 @@ interface props {
 interface checkBoxlist {
   checkBoxClick : any;
   checkBoxDefaultStatus: boolean;
-  anchorEl : any;
+  anchorEl : any; 
 }
 
 class Checkbox extends Component<props, checkBoxlist> {
