@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+// import { render } from '@testing-library/react';
+import React, { Component } from 'react'
+// import Counter from './components/counter'; //conponent 호출
+// import Movie from './components/Movie';
+// import MovieForm from './components/MovieForm';
+import Navbar from './components/Navbar';
+import Users from './pages/Users';
+import Checkbox from './components/Checkbox.tsx';
+import Context from './components/Context';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  
+  render() {
+    return (//JSX문법 (class x, className o)
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className="container">
+            <Switch>
+              <Route path="/movies" exact>
+                <Context />
+              </Route>
+              <Route path="/users" exact>
+                <Users />
+              </Route>
+              <Route path="/" exact>
+                <h1>Main</h1>
+                <Checkbox />
+              </Route>
+              <Route>
+                <Route path="/test" exact>
+                </Route>
+              </Route>
+            </Switch>
+          </div>
+          
+
+          
+        </div>
+      </Router>
+    );
+}}
 
 export default App;

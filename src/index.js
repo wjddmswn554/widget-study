@@ -1,17 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './App.js'; //실제로 정의된 사용자 정의 컴포넌트 내용이 들어있는 파일. ./App으로 확장명 생략 가능
 
-ReactDOM.render(
+ReactDOM.render( //react dom을 이용해서 원하는 component를 렌더링
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App /> 
+  </React.StrictMode>, //App이라는 component를 불러옴
+  document.getElementById('root') //public/index.html에 conponent를 보여줌
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
