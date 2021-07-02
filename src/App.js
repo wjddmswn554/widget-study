@@ -7,6 +7,8 @@ import Navbar from './components/Navbar';
 import Users from './pages/Users';
 import Checkbox from './components/Checkbox.tsx';
 import Context from './components/Context';
+// import Drag from './components/dragdrop/Drag';
+import ListDrage from './components/dragdrop/ListDrage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,15 +36,14 @@ class App extends Component {
               </Route>
               <Route>
                 <Route path="/test" exact>
+                  <ListDrage />
                 </Route>
               </Route>
             </Switch>
           </div>
-          
-
-          
         </div>
       </Router>
+      
     );
 }}
 

@@ -33,7 +33,7 @@ html, body {
     margin: 0.2rem;
   }
   
-  .bg-light {
+  .bg-light { 
       background-color: rgba(19,124,144,1)!important;
   }
   
@@ -68,7 +68,7 @@ html, body {
   }
   
   .gauge .wj-min {
-    color:rgba(0, 0, 0);
+    color:rgb(0, 0, 0);
   }
   
   .gauge .wj-max {

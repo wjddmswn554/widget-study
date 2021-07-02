@@ -6,7 +6,8 @@ import { FlexGrid, FlexGridColumn } from 'wijmo/wijmo.react.grid';
 import { FlexChart, FlexPie, FlexChartSeries } from 'wijmo/wijmo.react.chart';
 import { RadialGauge } from 'wijmo/wijmo.react.gauge';
 
-import '../css/style.css';
+// import '../css/style.css';
+import '../css/style.scss';
 
 // Data imports
 import { recentSales, salesByCountry, salesByPerson } from '../data/data.js';
@@ -31,7 +32,7 @@ class ChartPanel extends Component<props> {
   render() {
     return (
       <div className="col-lg-4 col-md-6 col-sm-12 mt-1">
-        <div className="card dashboardPanel">
+        <div className="card_dashboardPanel">
           <div className="card-body">
             <h5 className="card-title">{this.props.title}</h5>
             {this.props.children}
@@ -127,8 +128,8 @@ class DataPanel extends Component<props> {
   class TestWidget4 extends Component<props> {
     render() {
       return (
-        <ChartPanel title="5">
-          <div>
+        <ChartPanel title="4">
+          <div className="text">
             test widget.
           </div>
         </ChartPanel>
@@ -226,12 +227,12 @@ class Widget extends Component<props, widgetData> {
                       }
                       {
                         this.state.checkBoxClick[4]
-                        ? <TestWidget4 />
+                        ? <TestWidget4 key={1} />
                         : null
                       }
                       {
                         this.state.checkBoxClick[5]
-                        ? <TestWidget5 />
+                        ? <TestWidget5 key={2} />
                         : null
                       }
                       {

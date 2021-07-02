@@ -5,6 +5,10 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
+// drag and drop
+import { DndProvider, useDrag, useDrop } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
 interface props { 
 }
 
@@ -170,9 +174,11 @@ class Checkbox extends Component<props, checkBoxlist> {
             />Bar 10<br />
           </MenuItem>
         </Menu>
-        <div>
-          <Widget checkBoxClick={this.state.checkBoxClick} />
-        </div>
+        <DndProvider backend={HTML5Backend}>
+          <div>
+            <Widget checkBoxClick={this.state.checkBoxClick} />
+          </div>
+        </DndProvider>
       </>
     );
   }
