@@ -12,7 +12,7 @@ const MovableItem = ({name, setItems}) => {
       return prevState.map(e => {
         return {
           ...e,
-          column: e.name === currenItem.name ? columnName : e.column, //일치하면 이동
+          column: e.name === currenItem ? columnName : e.column, //일치하면 이동
         }
       })
     })
@@ -24,9 +24,9 @@ const MovableItem = ({name, setItems}) => {
         end: (item, monitor) => { // 사용자가 드래그 후 버튼을 놓을 때 수행해야 하는 작업
             const dropResult = monitor.getDropResult();
             if(dropResult && dropResult.name === 'Column 1'){
-                changeItemColumn(item, 'Column 1')
+                changeItemColumn(name, 'Column 1')
             } else {
-                changeItemColumn(item, 'Column 2')
+                changeItemColumn(name, 'Column 2')
             }
         },
         collect: (monitor) => ({
