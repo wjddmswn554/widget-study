@@ -6,7 +6,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 // drag and drop
-import { DndProvider, useDrag, useDrop } from "react-dnd";
+import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 interface props { 
@@ -91,10 +91,11 @@ class Checkbox extends Component<props, checkBoxlist> {
       anchorEl : null,
     });
   }
-
-  render() { 
+  
+  render() {
+    const title = "title";
     return (
-      <>
+       <>
         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={(e) => {this.handleClick(e)}} style={{float: 'right'}}>
           Open Menu
         </Button>
@@ -174,6 +175,7 @@ class Checkbox extends Component<props, checkBoxlist> {
             />Bar 10<br />
           </MenuItem>
         </Menu>
+
         <DndProvider backend={HTML5Backend}>
           <div>
             <Widget checkBoxClick={this.state.checkBoxClick} />

@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import useState from 'react';
 import './App.css';
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
