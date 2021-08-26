@@ -8,10 +8,14 @@ import '../../css/DraggingTest.css';
 
 //https://ej2.syncfusion.com/react/documentation/dashboard-layout/interaction-with-panels/dragging-moving-of-panels/
 class DraggingTest extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.cellSpacing = [10, 10];
-    }
+
+    // constructor(props) {
+    //     super(props);
+    //     this.cellSpacing = [10, 10];
+    //     this.state = {
+    //         checkBoxClick: this.props.checkBoxClick,
+    //       };
+    // }
     // Template for line Chart 
     lineTemplate() {
         const lineData = [
@@ -91,15 +95,15 @@ class DraggingTest extends React.Component {
            <DashboardLayoutComponent id="dashboard_default" draggableHandle='.e-panel-header' columns={6} cellSpacing={this.cellSpacing} allowResizing={true}>
                 <PanelsDirective>
                     <PanelDirective sizeX={2} sizeY={2} row={0} col={0} content={this.pieTemplate} header="<div class='header'>Product usage ratio</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={0} col={1} content={this.pieTemplate} header="<div class='header'>Last year Sales Comparison</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={0} col={2} content={this.pieTemplate} header="<div class='header'>Mobile browsers usage</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={1} col={0} content={this.lineTemplate} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={1} col={1} content={this.lineTemplate} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={1} col={2} content={this.lineTemplate} header="<div class='header'>Product usage ratio</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={2} col={0} content={this.columnTemplate} header="<div class='header'>Last year Sales Comparison</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={2} col={1} content={this.columnTemplate} header="<div class='header'>Mobile browsers usage</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={2} col={2} content={this.columnTemplate} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
-                    <PanelDirective sizeX={2} sizeY={2} row={3} col={0} content={this.pieTemplate1} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={0} col={2} content={this.pieTemplate} header="<div class='header'>Last year Sales Comparison</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={0} col={4} content={this.pieTemplate} header="<div class='header'>Mobile browsers usage</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={2} col={0} content={this.lineTemplate} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={2} col={2} content={this.lineTemplate} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={2} col={4} content={this.lineTemplate} header="<div class='header'>Product usage ratio</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={4} col={0} content={this.columnTemplate} header="<div class='header'>Last year Sales Comparison</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={4} col={2} content={this.columnTemplate} header="<div class='header'>Mobile browsers usage</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={4} col={4} content={this.columnTemplate} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
+                    <PanelDirective sizeX={2} sizeY={2} row={6} col={0} content={this.pieTemplate1} header="<div class='header'>Sales increase percentage</div><span class='handler e-icons burg-icon'></span>"/>
                 </PanelsDirective>
             </DashboardLayoutComponent>
         </div>);
